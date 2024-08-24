@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" xmlns:r="reflection" Id="JpDLkWEJ1byPq19dqGRtoc" LanguageVersion="2024.6.7-0113-ga9b832a275" Version="0.128">
+  <NugetDependency Id="FaSxY4QiDX5MvsVbGceo0z" Location="VL.CoreLib" Version="2024.6.7-0113-ga9b832a275" />
+  <Patch Id="HWT9kudCvMmQbTSjYwCHQP">
+    <Canvas Id="GuNFWHNDqgPNbyvBrgFqcE" DefaultCategory="Main" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="OnqjeFxelE2PLS52fx0iv5">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="K3DAGIRTn0fOnnvYbkpxK2">
+        <Canvas Id="Jm8YTC8d2ljLDv50dbh6yf" CanvasType="Group">
+          <Node Bounds="208,462,105,19" Id="HAcR4vJ0RvYLU64SxJoaP3">
+            <p:NodeReference LastCategoryFullName="IO.TOR" LastDependency="VL.TorSharp.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="TOR" NeedsToBeDirectParent="true" />
+              <Choice Kind="ProcessAppFlag" Name="HTTPGet" />
+            </p:NodeReference>
+            <Pin Id="EoznSMhm91bQT1g3Epdeno" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="RSyITmsqK4mQILuW2tS6l4" Name="Initialize" Kind="ApplyPin" />
+            <Pin Id="VYePNWJEbBzMNl47aly2DQ" Name="Settings" Kind="OutputPin" IsHidden="true" />
+            <Pin Id="RXApc4BkH8sOPM3FmxLrOH" Name="Result" Kind="OutputPin" />
+            <Pin Id="RbScUtcU0tSO7nQcf4zWav" Name="On Exception" Kind="OutputPin" />
+            <Pin Id="DndolNdDFDdM1RFOqwLq3P" Name="On Cancelled" Kind="OutputPin" IsHidden="true" />
+            <Pin Id="KZaMTdfCVlCNbacZ9Zis5A" Name="Is Running" Kind="OutputPin" />
+            <Pin Id="KmiOYtlp1MlLCKL4lLjrYX" Name="Duration" Kind="OutputPin" />
+            <Pin Id="AFYNiAHOFZjOvtYQZVIjio" Name="URL" Kind="InputPin" />
+            <Pin Id="TwMXf47mkMJMAI3xJGbLqy" Name="Cancel" Kind="InputPin" />
+            <Pin Id="ORUtSMIBd1JMJJFr5oknBp" Name="Start" Kind="InputPin" />
+            <Pin Id="AKUu8Sdleq3LR4WSuZOGk1" Name="Initialized" Kind="OutputPin" />
+            <Pin Id="HgLs8xj2319Pv2bSVhjB4Q" Name="TOR Status" Kind="OutputPin" />
+          </Node>
+          <Pad Id="F8dZwIauyHWNuA3iVc9qKX" Comment="Initialize" Bounds="211,332,35,35" ShowValueBox="true" isIOBox="true" Value="false">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="208,505,65,19" Id="ISWbO1wvBNuMkOKOSgIYT9">
+            <p:NodeReference LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="HoldLatest" />
+            </p:NodeReference>
+            <Pin Id="MsNqgyRwyZfP9MAG2mHQ0W" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="HTFjau32qbRMNoa7wvCoN3" Name="Initial Result" Kind="InputPin" IsHidden="true" />
+            <Pin Id="UchOLcivr8tOVoEF7H7HKu" Name="Async Notifications" Kind="InputPin" />
+            <Pin Id="SzjE0IJ6dhWLhnfvzzur9I" Name="Reset" Kind="InputPin" />
+            <Pin Id="B2fo6grtlk0LUKCkAqCtpV" Name="Value" Kind="OutputPin" />
+            <Pin Id="MbqxMB1dhYuQQ7eKDAq6KS" Name="On Data" Kind="OutputPin" />
+          </Node>
+          <Pad Id="PAL3K6wxDQqM6Jld5NTnzu" Comment="" Bounds="210,553,172,23" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="PsGRQl0Z7hJOzcOMsDX7nD" Comment="Start" Bounds="310,441,35,15" ShowValueBox="true" isIOBox="true" Value="false">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="PZfma79AnPVLwBKrJi097x" Comment="Cancel" Bounds="277,417,35,15" ShowValueBox="true" isIOBox="true" Value="false">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="241,374,108,19" Id="BKKO4oYlSbkQai3buJiVuZ">
+            <p:NodeReference LastCategoryFullName="IO.TOR.Utils" LastDependency="VL.TorSharp.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="CheckTorIPEndpoint" />
+            </p:NodeReference>
+            <Pin Id="OCD6p5YnFX3N3PZC1YYpSd" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="195,163,83,19" Id="MkMKkjSgbdWMIx92UzhPY9">
+            <p:NodeReference LastCategoryFullName="IO.TOR" LastDependency="VL.TorSharp.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="TOR" />
+              <Choice Kind="ProcessAppFlag" Name="FetchTorAsync" />
+            </p:NodeReference>
+            <Pin Id="UKt841FopJHPdPv6acGkpo" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="JIQfqmAlHdSMt9LOwGQ0BH" Name="Start" Kind="InputPin" />
+            <Pin Id="AMPsKsuJ9PdLOyHWw3ibWa" Name="On Finished" Kind="OutputPin" />
+            <Pin Id="JqIlxbhT0CcOTI8jGn7rOf" Name="Is Running" Kind="OutputPin" />
+          </Node>
+          <Pad Id="MWTmxJlMl0QN1pAcpk2n3H" Comment="Start" Bounds="197,122,35,35" ShowValueBox="true" isIOBox="true" Value="false">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="PaQY7PJtprzLR7H2z2icS4" Comment="Is Running" Bounds="275,199,35,15" ShowValueBox="true" isIOBox="true" />
+          <Overlay Id="AaSAXeCK9rTMDzyeb4ykbf" Name="1. Fetch TOR" Bounds="155,64,520,171" />
+          <Pad Id="O5T5alF3bo7NR2x5d0zk2f" Bounds="394,123,249,62" ShowValueBox="true" isIOBox="true" Value="Before using the TOR node, you need to get TOR. Use this convenience node to retrieve it. This is a one-time process!">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Overlay Id="D7oiM9YKiuHPQxQPxD5fOR" Name="Use TOR" Bounds="155,269,519,321" />
+          <Pad Id="NkMAlayrxj7PJX5f25jRgo" Bounds="440,398,194,88" ShowValueBox="true" isIOBox="true" Value="This is kinda like your classic HTTPGet. You first have to Initialize it, and then you can browse to any URL.">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="791,124,108,19" Id="OhkWZpKt8lGMTtxCv5R8nm">
+            <p:NodeReference LastCategoryFullName="IO.TOR.Utils" LastDependency="VL.TorSharp.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="CheckTorIPEndpoint" />
+            </p:NodeReference>
+            <Pin Id="O5Cbh5F0810OslenNxxPEI" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Overlay Id="Kk8IYlJ2FQONPgl9dEiz19" Name="Pro tip" Bounds="741,66,486,194">
+            <p:ColorIndex p:Type="Int32">5</p:ColorIndex>
+          </Overlay>
+          <Pad Id="OnAHJn2hEhDOOxuWObrSnl" Bounds="784,167,403,64" ShowValueBox="true" isIOBox="true" Value="This little conveninent URL will return whether or not you're using TOR, and which IP you're using. Make a query to it with a normal HTTP client and compare the output!">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+        </Canvas>
+        <Patch Id="VChNNjJP6QHL31wDCAS1jx" Name="Create" />
+        <Patch Id="KYvH97i3XNANOp7EibaWKW" Name="Update" />
+        <ProcessDefinition Id="OQNT8MtElYzMEDHSwZ33U6">
+          <Fragment Id="TVTVj7FusstLVoHaytj8vH" Patch="VChNNjJP6QHL31wDCAS1jx" Enabled="true" />
+          <Fragment Id="UNHB8AeCOTeLRvEMMQuERm" Patch="KYvH97i3XNANOp7EibaWKW" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="FPiKvT2FzklPI1Yf0m8BJ7" Ids="F8dZwIauyHWNuA3iVc9qKX,RSyITmsqK4mQILuW2tS6l4" />
+        <Link Id="SDfEQYt1NDyO6HFz5NG6ix" Ids="RXApc4BkH8sOPM3FmxLrOH,UchOLcivr8tOVoEF7H7HKu" />
+        <Link Id="NRiQUm9TPfVLH7yhYtYBzI" Ids="B2fo6grtlk0LUKCkAqCtpV,PAL3K6wxDQqM6Jld5NTnzu" />
+        <Link Id="GrjRBfQWe0IPpwjiRcdUhd" Ids="PsGRQl0Z7hJOzcOMsDX7nD,ORUtSMIBd1JMJJFr5oknBp" />
+        <Link Id="HyoqY4PTR4VLKcxsegZchm" Ids="PZfma79AnPVLwBKrJi097x,TwMXf47mkMJMAI3xJGbLqy" />
+        <Link Id="TWfSTI12YfMNqlDlxRVjbe" Ids="OCD6p5YnFX3N3PZC1YYpSd,AFYNiAHOFZjOvtYQZVIjio" />
+        <Link Id="IubUr9LRDpDL7SrIurAU0M" Ids="MWTmxJlMl0QN1pAcpk2n3H,JIQfqmAlHdSMt9LOwGQ0BH" />
+        <Link Id="IU2pj4CVcM9P5vHcJ4WFwQ" Ids="JqIlxbhT0CcOTI8jGn7rOf,PaQY7PJtprzLR7H2z2icS4" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="BcB69QuC7eAQORq1k5eT8q" Location="VL.TorSharp" Version="0.0.0" />
+  <PlatformDependency Id="KTorfbbWlcFP9PPxN5N4AH" Location="System.Net.Http" />
+</Document>
